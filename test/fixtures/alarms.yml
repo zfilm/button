@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incidentnr: 1
+  sitenr: 1
+  customernr: 1
+  impnr: 1
+  status: MyText
+  datetime: 2014-08-11 19:58:46
+  customername: MyText
+  adress: MyText
+  post: MyText
+
+two:
+  incidentnr: 1
+  sitenr: 1
+  customernr: 1
+  impnr: 1
+  status: MyText
+  datetime: 2014-08-11 19:58:46
+  customername: MyText
+  adress: MyText
+  post: MyText

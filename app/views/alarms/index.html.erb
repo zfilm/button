@@ -1,0 +1,35 @@
+<h1>listing alarms</h1>
+<%= link_to "New alarm", new_alarm_path %>
+<table>
+	<tr>
+		<th>incidentnr</th>
+		<th>sitenr</th>
+		<th>customernr</th>
+		<th>impnr</th>
+		<th>status</th>
+		<th>customername</th>
+		<th>adress</th>
+		<th>post</th>
+		<th>created at</th>
+		<th>Updated at</th>
+		<th>action</th>
+	</tr>
+	
+	<% @alarms.each do |alarm| %>
+		<tr>
+			<td><%= alarm.incidentnr %></td>
+			
+			<td><%= alarm.sitenr %></td>
+			<td><%= alarm.customernr %></td>
+			<td><%= alarm.impnr %></td>
+			<td><%= alarm.status %></td>
+			<td><%= alarm.customername %></td>
+			<td><%= alarm.adress %></td>
+			<td><%= alarm.post %></td>
+			<td><%= alarm.created_at%></td>
+			<td><%= alarm.updated_at %></td>
+			<td><%= link_to "Show", alarm_path(alarm) %></td>
+			<td><%= link_to "Edit", edit_alarm_path(alarm) %></td>
+		</tr>
+	<% end %>
+</table>

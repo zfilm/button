@@ -1,0 +1,51 @@
+<h1>Editing alarm</h1>
+ 
+<%= form_for :alarm, url: alarm_path(@alarm), method: :patch do |f| %>
+  <% if @alarm.errors.any? %>
+  	<div id="error_explanation">
+    <h2><%= pluralize(@alarm.errors.count, "error") %> prohibited this article from being saved:</h2>
+    <ul>
+    	<% @alarm.errors.full_messages.each do |msg| %>
+      		<li><%= msg %></li>
+    	<% end %>
+    </ul>
+  </div>
+  <% end %>
+	<p>
+		<%= f.label :incidentnr %><br>
+		<%= f.number_field :incidentnr %>
+	</p>
+	
+	<p>
+		<%= f.label :sitenr %><br>
+		<%= f.number_field :sitenr %>
+	</p>
+	<p>
+		<%= f.label :customernr %><br>
+		<%= f.number_field :customernr %>
+	</p>
+	<p>
+		<%= f.label :impnr %><br>
+		<%= f.number_field :impnr %>
+	</p>
+	<p>
+		<%= f.label :status %><br>
+		<%= f.text_field :status %>
+	</p>
+	<p>
+		<%= f.label :customername %><br>
+		<%= f.text_field :customername %>
+	</p>
+	<p>
+		<%= f.label :adress %><br>
+		<%= f.text_field :adress %>
+	</p>
+	<p>
+		<%= f.label :post %><br>
+		<%= f.text_field :post %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+<%= link_to "Back", alarm_path %>
